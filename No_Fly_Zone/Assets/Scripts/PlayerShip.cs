@@ -7,33 +7,51 @@ public class PlayerShip : MonoBehaviour {
 
     [Tooltip("In ms^-1")] [SerializeField] float speed = 4f;
 
-    [Tooltip("In m")] [SerializeField] float xRange = 2.5f;
+    [Tooltip("In m")] [SerializeField] float xRange = 2f;
     [Tooltip("In m")] [SerializeField] float yRange = 2f;
+
+    float xThrow, yThrow;
+
+    [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] float controlPitchFactor = -20f;
+    [SerializeField] float controlRollFactor = -20f;
 
     void Start() {
         
     }
 
     void Update() {
-        HorizontalInputController();
-        VerticalInputController();
+        ProcessTranslation();
+        ProcessRotation();
     }
 
-    private void HorizontalInputController() {
-        float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+    private void ProcessTranslation() {
+        xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+        yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+
         float xOffset = xThrow * speed * Time.deltaTime;
-        float rawXPos = transform.localPosition.x + xOffset;
-        float clampedXPos = Mathf.Clamp(rawXPos ,-xRange, xRange);
-
-        transform.localPosition = new Vector3(clampedXPos, transform.localPosition.y, transform.localPosition.z);
-    }
-
-    private void VerticalInputController() {
-        float yThrow = CrossPlatformInputManager.GetAxis("Vertical");
         float yOffset = yThrow * speed * Time.deltaTime;
+        
+        float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
+        
+        float clampedXPos = Mathf.Clamp(rawXPos ,-xRange, xRange);
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
-        transform.localPosition = new Vector3(transform.localPosition.x, clampedYPos, transform.localPosition.z);
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    private void ProcessRotation() {
+        float pitchDueToPos = transform.localPosition.y * positionPitchFactor;
+        float pitchDueToControl = yThrow * controlPitchFactor;
+        float pitch = pitchDueToPos + pitchDueToControl;
+
+        float yaw = transform.localPosition.x * positionYawFactor;
+        
+        float roll = xThrow * controlRollFactor;
+
+        transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+
     }
 }

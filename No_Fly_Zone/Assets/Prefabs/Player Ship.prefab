@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7943265977016932059}
   - component: {fileID: 7946371716911731197}
   - component: {fileID: 7954383662853635933}
+  - component: {fileID: 1793795406}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7940301539146331409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -15.831, y: 2.041, z: 520.5087}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -77,3 +78,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1793795406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7940301539146331409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c6dbe29e6812f64fb6fc1b3438a69bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  xRange: 2.5
+  yRange: 1.5
+  positionPitchFactor: -5
+  positionYawFactor: 5
+  controlPitchFactor: -20
+  controlRollFactor: -20
