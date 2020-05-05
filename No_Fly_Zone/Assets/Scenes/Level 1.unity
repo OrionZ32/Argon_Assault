@@ -512,7 +512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circuit: {fileID: 410242579}
-  lookAheadForTargetOffset: 5
+  lookAheadForTargetOffset: 4
   lookAheadForTargetFactor: 0.1
   lookAheadForSpeedOffset: 10
   lookAheadForSpeedFactor: 0.2
@@ -687,8 +687,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c6dbe29e6812f64fb6fc1b3438a69bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xSpeed: 4
+  speed: 10
   xRange: 2.5
+  yRange: 1.7
 --- !u!1001 &1006376955416085143
 PrefabInstance:
   m_ObjectHideFlags: 0
