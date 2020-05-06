@@ -3,43 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class PlayerShip : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 
-    [Tooltip("In ms^-1")] [SerializeField] float speed = 4f;
-
+    [Header("General")]
+    [Tooltip("In ms^-1")] [SerializeField] float controlSpeed = 4f;
     [Tooltip("In m")] [SerializeField] float xRange = 2f;
     [Tooltip("In m")] [SerializeField] float yRange = 2f;
 
-    float xThrow, yThrow;
-
+    [Header("Screen Position Control")]
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float positionYawFactor = 5f;
     [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
-
-    void Start() {
-        
-    }
+    
+    float xThrow, yThrow;
+    bool isControlEnabled = true;
 
     void Update() {
-        ProcessTranslation();
-        ProcessRotation();
+        if (isControlEnabled) {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
-
-    private void OnCollisionEnter(Collision collision) {
-        print ("player collided with something");
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        print ("player triggerd something");
-    } 
 
     private void ProcessTranslation() {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
 
-        float xOffset = xThrow * speed * Time.deltaTime;
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
         
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
@@ -61,5 +53,12 @@ public class PlayerShip : MonoBehaviour {
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
 
+    }
+
+    //called by string reference in CollisionHandler.cs
+    private void OnPlayerDeath() {
+        print ("player died");
+        isControlEnabled = false;
+    
     }
 }
