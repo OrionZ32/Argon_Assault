@@ -5,17 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour {
 
-    [SerializeField] GameObject deathFx;
+    [SerializeField] GameObject shipExplosion;
     [SerializeField] float levelLoadDelay = 1f;
 
     private void OnTriggerEnter(Collider other) {
         DeathSequence();
+        shipExplosion.SetActive(true);
+        Invoke("ReloadLevel", levelLoadDelay);
     }
 
     private void DeathSequence() {
         SendMessage("OnPlayerDeath");
-        deathFx.SetActive(true);
-        Invoke("ReloadLevel", levelLoadDelay);
     }
 
     private void ReloadLevel() {
