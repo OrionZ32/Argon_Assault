@@ -26,6 +26,14 @@ public class PlayerShip : MonoBehaviour {
         ProcessRotation();
     }
 
+    private void OnCollisionEnter(Collision collision) {
+        print ("player collided with something");
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        print ("player triggerd something");
+    } 
+
     private void ProcessTranslation() {
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
