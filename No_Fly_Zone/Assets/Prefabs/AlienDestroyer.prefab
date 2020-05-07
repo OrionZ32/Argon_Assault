@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 4376252303983936}
   - component: {fileID: 33121363902164818}
   - component: {fileID: 23208376801763390}
-  - component: {fileID: 64954973120253374}
-  - component: {fileID: 7430635884081635603}
+  - component: {fileID: 2020999871}
   m_Layer: 0
   m_Name: AlienDestroyer
   m_TagString: Untagged
@@ -79,30 +78,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64954973120253374
-MeshCollider:
+--- !u!114 &2020999871
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048570700629992}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 5c929a1e7e6053f499c799f0b76fc965, type: 3}
---- !u!65 &7430635884081635603
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048570700629992}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.0721326, y: 4.40429, z: 18.998772}
-  m_Center: {x: 0.000015334033, y: 0.7995382, z: 1.4622607}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c239048c4eb7641a63cd44282b683f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyExplosion: {fileID: 0}

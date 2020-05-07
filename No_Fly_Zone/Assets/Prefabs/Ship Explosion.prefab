@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 594529578938478098}
   - component: {fileID: 594529578938478097}
   - component: {fileID: 594529578938478096}
+  - component: {fileID: 114412919974741048}
   m_Layer: 0
   m_Name: Ship Explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &594529578938478099
 Transform:
   m_ObjectHideFlags: 0
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 594529578938478103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -4711,7 +4712,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1e56029dc1e5ba047a0af8ad880c6f7d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.228
+  m_Volume: 0.105
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4795,3 +4796,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &114412919974741048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594529578938478103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c35f6bd52c2b744fa196a6c78fe02d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

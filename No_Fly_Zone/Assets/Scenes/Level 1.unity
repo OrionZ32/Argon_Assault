@@ -112,25 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &126352336 stripped
+--- !u!1 &158966885
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01,
-    type: 3}
-  m_PrefabInstance: {fileID: 755496296}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &126352341
-MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126352336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c239048c4eb7641a63cd44282b683f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158966886}
+  m_Layer: 0
+  m_Name: Spawned At Runtime
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &158966886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 158966885}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &170076734 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 5037030397487429159, guid: 7944fc9f49b9e4a4aa62190ea5fcffae,
@@ -357,7 +368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 424998529}
   m_Layer: 0
-  m_Name: Enimies
+  m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,16 +381,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424998528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 334.00186, y: 72.98831, z: 533.18604}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -163.69815, y: 49.08831, z: 178.28604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 197608517}
   - {fileID: 1930632754}
   - {fileID: 1586033499}
   - {fileID: 1010977410}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1950015455}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &511629802
 GameObject:
@@ -497,7 +508,7 @@ Transform:
   m_LocalPosition: {x: 9.08, y: 5.83, z: -61.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1006376955416085144}
+  - {fileID: 7190974066608395340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -534,6 +545,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424998529}
     m_Modifications:
+    - target: {fileID: 2020999871, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
+      propertyPath: enemyExplosion
+      value: 
+      objectReference: {fileID: 594529578938478103, guid: 13d309a5b0f424547b531b9840ca98e9,
+        type: 3}
+    - target: {fileID: 2020999871, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 158966886}
     - target: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
       propertyPath: m_Name
       value: AlienDestroyer 00
@@ -580,11 +600,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4376252303983936, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7430635884081635603, guid: 8e35ec7e332c3d243ac23e3686bafe01,
-        type: 3}
-      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -649,25 +664,6 @@ Transform:
   m_Father: {fileID: 410242580}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &967190887 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1324134289}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &967190891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967190887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c239048c4eb7641a63cd44282b683f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 0}
 --- !u!4 &1010977410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4154595508381948, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb,
@@ -741,6 +737,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424998529}
     m_Modifications:
+    - target: {fileID: 1477106232, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
+      propertyPath: enemyExplosion
+      value: 
+      objectReference: {fileID: 594529578938478103, guid: 13d309a5b0f424547b531b9840ca98e9,
+        type: 3}
+    - target: {fileID: 1477106232, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 158966886}
     - target: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
       propertyPath: m_Name
       value: AlienFighter 00
@@ -796,25 +801,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
---- !u!1 &1477106228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1894394787}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1477106232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1477106228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c239048c4eb7641a63cd44282b683f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 0}
 --- !u!1001 &1520481020
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -860,7 +846,7 @@ PrefabInstance:
     - target: {fileID: 6074573270841901242, guid: 0a8f5b5ed1bbddf48805ecad4ed67596,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6074573270841901242, guid: 0a8f5b5ed1bbddf48805ecad4ed67596,
         type: 3}
@@ -927,6 +913,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424998529}
     m_Modifications:
+    - target: {fileID: 1477106232, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
+      propertyPath: enemyExplosion
+      value: 
+      objectReference: {fileID: 594529578938478103, guid: 13d309a5b0f424547b531b9840ca98e9,
+        type: 3}
+    - target: {fileID: 1477106232, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 158966886}
     - target: {fileID: 1458391615630120, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
       propertyPath: m_Name
       value: AlienFighter 01
@@ -975,11 +970,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.2930002
       objectReference: {fileID: 0}
-    - target: {fileID: 939631670063001460, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d18ca3ac0d2ecd4aa99a8099af486bb, type: 3}
 --- !u!1001 &1930632753
@@ -989,6 +979,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 424998529}
     m_Modifications:
+    - target: {fileID: 2020999871, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
+      propertyPath: enemyExplosion
+      value: 
+      objectReference: {fileID: 594529578938478103, guid: 13d309a5b0f424547b531b9840ca98e9,
+        type: 3}
+    - target: {fileID: 2020999871, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
+      propertyPath: parent
+      value: 
+      objectReference: {fileID: 158966886}
     - target: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
       propertyPath: m_Name
       value: AlienDestroyer 01
@@ -1037,11 +1036,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7430635884081635603, guid: 8e35ec7e332c3d243ac23e3686bafe01,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e35ec7e332c3d243ac23e3686bafe01, type: 3}
 --- !u!4 &1930632754 stripped
@@ -1078,28 +1072,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 533053759}
+  - {fileID: 424998529}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2020999866 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1048570700629992, guid: 8e35ec7e332c3d243ac23e3686bafe01,
-    type: 3}
-  m_PrefabInstance: {fileID: 1930632753}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2020999871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020999866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c239048c4eb7641a63cd44282b683f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyExplosion: {fileID: 0}
 --- !u!1001 &1006376955416085143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,6 +1106,26 @@ PrefabInstance:
     - target: {fileID: 708607200, guid: d99236f4d34689047bce5528d97b8384, type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 411919948025194065, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 411919948025194065, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 411919948025194065, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 411919948025194068, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2399795416190240217, guid: d99236f4d34689047bce5528d97b8384,
         type: 3}
@@ -1228,12 +1224,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d99236f4d34689047bce5528d97b8384, type: 3}
---- !u!4 &1006376955416085144 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7943265977016932059, guid: d99236f4d34689047bce5528d97b8384,
-    type: 3}
-  m_PrefabInstance: {fileID: 1006376955416085143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3651453140441456008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1446,3 +1436,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 547b7193068200845b10e1da7995a443, type: 3}
+--- !u!4 &7190974066608395340 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7943265977016932059, guid: d99236f4d34689047bce5528d97b8384,
+    type: 3}
+  m_PrefabInstance: {fileID: 1006376955416085143}
+  m_PrefabAsset: {fileID: 0}
