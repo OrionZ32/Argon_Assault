@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour {
     [Tooltip("In ms^-1")] [SerializeField] float controlSpeed = 4f;
     [Tooltip("In m")] [SerializeField] float xRange = 2f;
     [Tooltip("In m")] [SerializeField] float yRange = 2f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen Position Control")]
     [SerializeField] float positionPitchFactor = -5f;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour {
         if (isControlEnabled) {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
@@ -53,6 +55,27 @@ public class PlayerController : MonoBehaviour {
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
 
+    }
+
+    private void ProcessFiring() {
+        if (CrossPlatformInputManager.GetButton("Fire")) {
+            ActivateBullets();
+        }
+        else {
+            DeactivateBullets();
+        }
+    }
+
+    private void ActivateBullets() {
+        foreach (GameObject gun in guns) {
+            gun.SetActive(true);
+        }
+    }
+
+    private void DeactivateBullets() {
+        foreach (GameObject gun in guns) {
+            gun.SetActive(false);
+        }
     }
 
     //called by string reference in CollisionHandler.cs

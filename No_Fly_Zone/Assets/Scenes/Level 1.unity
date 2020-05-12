@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &87995615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 158674734207345487, guid: d99236f4d34689047bce5528d97b8384,
+    type: 3}
+  m_PrefabInstance: {fileID: 1006376955416085143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &158966885
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +270,12 @@ Transform:
   m_Father: {fileID: 410242580}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &361449820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7266549638050062475, guid: d99236f4d34689047bce5528d97b8384,
+    type: 3}
+  m_PrefabInstance: {fileID: 1006376955416085143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410242578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,9 +1359,33 @@ PrefabInstance:
     m_TransformParent: {fileID: 534669905}
     m_Modifications:
     - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: bullets.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
       propertyPath: controlSpeed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: bullets
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: bullets.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 361449820}
+    - target: {fileID: 65273092, guid: d99236f4d34689047bce5528d97b8384, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 87995615}
     - target: {fileID: 708607200, guid: d99236f4d34689047bce5528d97b8384, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
       value: 1
@@ -1373,6 +1409,16 @@ PrefabInstance:
     - target: {fileID: 708607200, guid: d99236f4d34689047bce5528d97b8384, type: 3}
       propertyPath: CollisionModule.collisionMessages
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 158674734207345484, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 158674734207345484, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 411919948025194065, guid: d99236f4d34689047bce5528d97b8384,
         type: 3}
@@ -1399,6 +1445,16 @@ PrefabInstance:
       propertyPath: shipExplosion
       value: 
       objectReference: {fileID: 687226331}
+    - target: {fileID: 7266549638050062472, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7266549638050062472, guid: d99236f4d34689047bce5528d97b8384,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 7266549638050062475, guid: d99236f4d34689047bce5528d97b8384,
         type: 3}
       propertyPath: m_IsActive
